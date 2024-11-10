@@ -30,20 +30,3 @@ CREATE TABLE IF NOT EXISTS Attention(
 
 
 
-
-
-
-CREATE TABLE IF NOT EXISTS Atencion (
-
-    id SERIAL PRIMARY KEY,
-
-    cliente_id INT NOT NULL,
-    profesional_id INT NOT NULL,
-    phone VARCHAR NOT NULL,
-    descripcion TEXT, -- Descripción del tipo de ayuda o consulta
-    FOREIGN KEY (cliente_id) REFERENCES Cliente(id),
-    FOREIGN KEY (profesional_id) REFERENCES Profesional(id)
-    );
-
-
-
