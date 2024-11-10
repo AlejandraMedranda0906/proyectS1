@@ -1,1 +1,24 @@
-spring.application.name=proyectS1
+server:
+  port: 8081
+  error:
+    include-message: always
+#Configuracion de spring
+spring:
+  #Configuracion de migracion
+  flyway:
+    enabled: true
+    baselineVersion: 1
+    locations:
+    classpath: db/migration
+    sqlMigrationSuffixes: .sql
+    baselineOnMigrate: true
+    sqlMigrationPrefix: V
+    schemas: public
+  }
+
+  datasource:
+    url: jdbc:postgresql://	raja.db.elephantsql.com:5432/utzwrelp?socketTimeout=3
+    username: utzwrelp
+    password: EEvpeHKCdQCaGc7rE9nWWKZkWwJBCErM
+    driverClassName: org.postgresql.Driver
+}
