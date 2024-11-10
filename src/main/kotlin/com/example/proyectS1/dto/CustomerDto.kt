@@ -14,4 +14,7 @@ class CustomerDto {
     @NotBlank(message = "Email is required")
 
     var email: String? = null
+
+    @field:NotBlank(message = "El teléfono es obligatorio")
+    val phone: String? = null
 }

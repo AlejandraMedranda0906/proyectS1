@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS client(
     PRIMARY KEY(id)
     );
 
-CREATE TABLE IF NOT EXISTS Professional (
+CREATE TABLE IF NOT EXISTS professional (
       id SERIAL,
       full_name VARCHAR(100) NOT NULL,
       especialidad VARCHAR(100),
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS Professional (
       PRIMARY KEY (id)
 );
 
-CREATE TABLE IF NOT EXISTS Attention(
+CREATE TABLE IF NOT EXISTS attention(
     id SERIAL PRIMARY KEY,
     client_id INT NOT NULL,
     Professional_id INT NOT NULL,
